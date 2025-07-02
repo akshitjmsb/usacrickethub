@@ -1,6 +1,6 @@
-MIT License
+MIT License + Commons Clause
 
-Copyright (c) [2025] [AkshitGupta]
+Copyright (c) 2025 Akshit Gupta
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -19,3 +19,7 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
+
+Commons Clause Restriction:
+
+The Software is provided under the above license, except that you may not sell the Software, or any part thereof, or offer it as a paid service. For purposes of this license, “sell” means practicing any or all of the rights granted to you under the above license to provide to third parties, for a fee or other consideration (including without limitation fees for hosting or consulting/ support services related to the Software), a product or service whose value derives, entirely or substantially, from the functionality of the Software. Any license notice or attribution required by the above license must also include this Commons Clause Restriction.
