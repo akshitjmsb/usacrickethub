@@ -1,15 +1,28 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    './src/**/*.{js,jsx,ts,tsx}',
+    "./index.html",
+    "./src/**/*.{js,jsx,ts,tsx}",
+    "./pages/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
     extend: {
       colors: {
-        // USA Flag Palette
-        'old-glory-red': '#B22234',
-        'old-glory-blue': '#3C3B6E',
-        'pure-white': '#FFFFFF',
+        // USA Flag Official Colors
+        'usa-red': '#B22234',  // Old Glory Red
+        'usa-blue': '#3C3B6E', // Old Glory Blue
+        'usa-white': '#FFFFFF',
+        // Additional colors for UI elements
+        'usa-light-red': '#E63946',
+        'usa-light-blue': '#4A6FA5',
+        primary: {
+          DEFAULT: '#1e40af',
+          dark: '#1e3a8a',
+        },
+      },
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+        serif: ['Merriweather', 'serif'],
       },
       borderRadius: {
         md: '0.375rem', // rounded-md
