@@ -1,31 +1,22 @@
-import React, { Suspense, lazy } from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Layout from './components/Layout';
-import Spinner from './components/Spinner';
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
 
-const Home = lazy(() => import('./pages/Home'));
-const Scores = lazy(() => import('./pages/Scores'));
-const Grounds = lazy(() => import('./pages/Grounds'));
-const News = lazy(() => import('./pages/News'));
-const About = lazy(() => import('./pages/About'));
-
-function App() {
+function Home() {
   return (
-    <Router>
-      <Suspense fallback={<Spinner />}>
-        <Routes>
-          <Route path="/" element={<Layout />}>
-            <Route index element={<Home />} />
-            <Route path="scores" element={<Scores />} />
-            <Route path="grounds" element={<Grounds />} />
-            <Route path="news" element={<News />} />
-            <Route path="about" element={<About />} />
-          </Route>
-        </Routes>
-      </Suspense>
-    </Router>
+    <div className="flex flex-col items-center mt-16">
+      <h1 className="text-3xl font-bold text-blue-700">Hello, USA Cricket Hub!</h1>
+    </div>
   );
 }
 
-export default App;
-
+export default function App() {
+  return (
+    <BrowserRouter>
+      <Navbar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+    </BrowserRouter>
+  );
+}
