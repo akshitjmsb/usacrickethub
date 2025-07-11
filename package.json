@@ -2,6 +2,8 @@
   "scripts": {
     "test": "vitest --run",
     "test:watch": "vitest",
+    "test": "vitest --run",
+    "test:watch": "vitest",
     "dev": "vite",
     "lint": "eslint src --ext js,jsx",
     "format": "prettier --write .",
@@ -20,6 +22,9 @@
     "vite": "^7.0.2"
   },
   "devDependencies": {
+    "vitest": "^1.0.0",
+    "msw": "^1.0.0",
+    "@vitest/coverage-c8": "^1.0.0",
     "@vitest/coverage-c8": "^0.33.0",
     "autoprefixer": "^10.4.21",
     "msw": "^2.10.3",

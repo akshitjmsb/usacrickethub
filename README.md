@@ -12,6 +12,19 @@
 
 ### Running Tests
 
+Run all backend/API tests:
+
+```sh
+pnpm test
+```
+
+### API Contract
+
+The `/api/live-scores` endpoint returns a JSON array of match objects. See the file for a sample response.
+
+
+### Running Tests
+
 To run the backend/API tests:
 
 ```sh
