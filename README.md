@@ -9,6 +9,17 @@
 - TanStack Query (coming soon)
 
 ## Quick Start
+
+### Running Tests
+
+To run the backend/API tests:
+
+```sh
+pnpm test
+```
+
+This will execute all Vitest suites, including the /api/live-scores contract.
+
 ```bash
 git clone https://github.com/akshitjmsb/usacrickethub
 cd usacrickethub
