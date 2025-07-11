@@ -1,5 +1,6 @@
 {
   "scripts": {
+    "test": "vitest --run",
     "dev": "vite",
     "lint": "eslint src --ext js,jsx",
     "format": "prettier --write .",
@@ -19,7 +20,9 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.21",
+    "msw": "^2.10.3",
     "postcss": "^8.5.6",
-    "tailwindcss": "^3.3.3"
+    "tailwindcss": "^3.3.3",
+    "vitest": "^3.2.4"
   }
 }
