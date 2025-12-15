@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>USA Cricket Hub - Shop</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@300;400;500;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/styles.css">
+
+    <style>
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+    </style>
+</head>
+
+<body class="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white antialiased">
+    <!-- Header -->
+    <header
+        class="sticky top-0 z-50 w-full border-b border-gray-200 bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60 dark:bg-background-dark/95 dark:border-gray-800">
+        <div class="px-4 md:px-10 py-3 flex items-center justify-between">
+            <!-- Logo Section -->
+            <div class="flex items-center gap-4">
+                <a class="flex items-center gap-3 group" href="./index.html">
+                    <div class="size-8 text-usa-blue dark:text-white transition-transform group-hover:scale-110">
+                        <svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                            <path clip-rule="evenodd"
+                                d="M24 18.4228L42 11.475V34.3663C42 34.7796 41.7457 35.1504 41.3601 35.2992L24 42V18.4228Z"
+                                fill="#f20d0d" fill-rule="evenodd"></path>
+                            <path clip-rule="evenodd"
+                                d="M24 8.18819L33.4123 11.574L24 15.2071L14.5877 11.574L24 8.18819ZM9 15.8487L21 20.4805V37.6263L9 32.9945V15.8487ZM27 37.6263V20.4805L39 15.8487V32.9945L27 37.6263ZM25.354 2.29885C24.4788 1.98402 23.5212 1.98402 22.646 2.29885L4.98454 8.65208C3.7939 9.08038 3 10.2097 3 11.475V34.3663C3 36.0196 4.01719 37.5026 5.55962 38.098L22.9197 44.7987C23.6149 45.0671 24.3851 45.0671 25.0803 44.7987L42.4404 38.098C43.9828 37.5026 45 36.0196 45 34.3663V11.475C45 10.2097 44.2061 9.08038 43.0155 8.65208L25.354 2.29885Z"
+                                fill="currentColor" fill-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-usa-blue dark:text-white text-xl font-black leading-tight tracking-tight uppercase">
+                        USA Cricket Hub</h2>
+                </a>
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex items-center gap-8 ml-8">
+                    <a class="text-usa-blue/80 hover:text-primary dark:text-gray-300 dark:hover:text-primary text-sm font-semibold transition-colors"
+                        href="#">Equipment</a>
+                    <a class="text-usa-blue/80 hover:text-primary dark:text-gray-300 dark:hover:text-primary text-sm font-semibold transition-colors"
+                        href="#">Jerseys</a>
+                    <a class="text-usa-blue/80 hover:text-primary dark:text-gray-300 dark:hover:text-primary text-sm font-semibold transition-colors"
+                        href="./community.html">Community</a>
+                    <a class="text-primary text-sm font-bold" href="#">Sale</a>
+                </nav>
+            </div>
+            <!-- Search & Actions -->
+            <div class="flex items-center gap-4">
+                <div class="hidden lg:flex w-64 items-center rounded-lg bg-gray-100 dark:bg-gray-800 px-3 py-2">
+                    <span class="material-symbols-outlined text-gray-500 text-[20px]">search</span>
+                    <input
+                        class="ml-2 w-full bg-transparent text-sm font-medium outline-none placeholder:text-gray-500 dark:text-white border-none focus:ring-0 p-0"
+                        placeholder="Search for bats, kits..." type="text" />
+                </div>
+                <div class="flex gap-2">
+                    <button
+                        class="flex size-10 items-center justify-center rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 text-usa-blue dark:text-white transition-colors relative">
+                        <span class="material-symbols-outlined">shopping_cart</span>
+                        <span
+                            class="absolute top-1.5 right-1.5 size-2 rounded-full bg-primary ring-2 ring-white dark:ring-background-dark"></span>
+                    </button>
+                    <button
+                        class="flex size-10 items-center justify-center rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 text-usa-blue dark:text-white transition-colors">
+                        <span class="material-symbols-outlined">account_circle</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Main Content Layout -->
+    <div class="flex min-h-screen flex-col w-full max-w-[1440px] mx-auto">
+        <!-- Hero Banner -->
+        <div class="p-4 md:p-6 pb-0">
+            <div
+                class="relative w-full rounded-2xl overflow-hidden bg-usa-blue min-h-[300px] flex items-center justify-start">
+                <img src="https://images.unsplash.com/photo-1531415074968-055a505be429?ixlib=rb-4.0.3&amp;auto=format&amp;fit=crop&amp;w=2069&amp;q=80"
+                    alt="Action shot of cricket players on a green field with a stadium in the background"
+                    class="absolute inset-0 h-full w-full object-cover object-center opacity-40">
+                <div class="absolute inset-0 bg-gradient-to-r from-usa-blue via-usa-blue/80 to-transparent"></div>
+                <div class="relative z-10 px-8 md:px-16 max-w-2xl text-white">
+                    <span
+                        class="inline-block px-3 py-1 bg-primary text-white text-xs font-bold uppercase tracking-wider rounded-full mb-4">Official
+                        Merchandise</span>
+                    <h1 class="text-4xl md:text-5xl font-black tracking-tight mb-4">
+                        Gear Up For The <br /><span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-white">2024
+                            Season</span>
+                    </h1>
+                    <p class="text-gray-200 text-lg mb-8 max-w-lg font-light">Get the official Team USA jerseys,
+                        professional grade willows, and premium protective gear.</p>
+                    <button
+                        class="bg-white text-usa-blue hover:bg-gray-100 px-6 py-3 rounded-lg font-bold text-sm transition-colors flex items-center gap-2">
+                        Shop Now <span class="material-symbols-outlined text-sm">arrow_forward</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="flex flex-col lg:flex-row gap-8 p-4 md:p-6 lg:p-10">
+            <!-- Sidebar / Filters -->
+            <aside class="w-full lg:w-64 flex-shrink-0 flex flex-col gap-6">
+                <!-- Header -->
+                <div class="flex items-center justify-between pb-2 border-b border-gray-200 dark:border-gray-800">
+                    <h3 class="text-usa-blue dark:text-white text-lg font-bold">Filters</h3>
+                    <button class="text-primary text-xs font-semibold hover:underline">Clear All</button>
+                </div>
+                <!-- Price Slider -->
+                <div class="flex flex-col gap-3">
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm font-bold text-gray-800 dark:text-gray-200">Price Range</span>
+                    </div>
+                    <div class="relative h-1 w-full bg-gray-200 rounded-full mt-2 mb-6">
+                        <div class="absolute left-[20%] right-[30%] top-0 bottom-0 bg-primary rounded-full"></div>
+                        <div class="absolute left-[20%] top-1/2 -translate-y-1/2 size-4 bg-white border-2 border-primary rounded-full cursor-pointer shadow-sm"
+                            role="slider" aria-valuenow="80" aria-valuemin="0" aria-valuemax="500" tabindex="0"
+                            aria-label="Minimum Price">
+                            <span
+                                class="absolute -bottom-7 left-1/2 -translate-x-1/2 text-xs font-medium text-gray-600 dark:text-gray-400">$80</span>
+                        </div>
+                        <div class="absolute right-[30%] top-1/2 -translate-y-1/2 size-4 bg-white border-2 border-primary rounded-full cursor-pointer shadow-sm"
+                            role="slider" aria-valuenow="350" aria-valuemin="0" aria-valuemax="500" tabindex="0"
+                            aria-label="Maximum Price">
+                            <span
+                                class="absolute -bottom-7 left-1/2 -translate-x-1/2 text-xs font-medium text-gray-600 dark:text-gray-400">$350</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Accordion Filters -->
+                <div class="flex flex-col gap-2">
+                    <!-- Categories -->
+                    <details class="group py-2 border-b border-gray-100 dark:border-gray-800" open="">
+                        <summary
+                            class="flex cursor-pointer items-center justify-between text-sm font-bold text-usa-blue dark:text-white list-none">
+                            Category
+                            <span
+                                class="material-symbols-outlined text-gray-400 transition group-open:rotate-180">expand_more</span>
+                        </summary>
+                        <div class="pt-3 flex flex-col gap-2">
+                            <label class="flex items-center gap-3 cursor-pointer group/item">
+                                <input checked=""
+                                    class="size-4 rounded border-gray-300 text-primary focus:ring-primary/20 cursor-pointer"
+                                    type="checkbox" />
+                                <span
+                                    class="text-sm text-gray-600 dark:text-gray-300 group-hover/item:text-primary transition-colors">Bats</span>
+                                <span class="ml-auto text-xs text-gray-400">(42)</span>
+                            </label>
+                            <label class="flex items-center gap-3 cursor-pointer group/item">
+                                <input
+                                    class="size-4 rounded border-gray-300 text-primary focus:ring-primary/20 cursor-pointer"
+                                    type="checkbox" />
+                                <span
+                                    class="text-sm text-gray-600 dark:text-gray-300 group-hover/item:text-primary transition-colors">Balls</span>
+                                <span class="ml-auto text-xs text-gray-400">(15)</span>
+                            </label>
+                            <label class="flex items-center gap-3 cursor-pointer group/item">
+                                <input
+                                    class="size-4 rounded border-gray-300 text-primary focus:ring-primary/20 cursor-pointer"
+                                    type="checkbox" />
+                                <span
+                                    class="text-sm text-gray-600 dark:text-gray-300 group-hover/item:text-primary transition-colors">Protection</span>
+                                <span class="ml-auto text-xs text-gray-400">(28)</span>
+                            </label>
+                            <label class="flex items-center gap-3 cursor-pointer group/item">
+                                <input
+                                    class="size-4 rounded border-gray-300 text-primary focus:ring-primary/20 cursor-pointer"
+                                    type="checkbox" />
+                                <span
+                                    class="text-sm text-gray-600 dark:text-gray-300 group-hover/item:text-primary transition-colors">Clothing</span>
+                                <span class="ml-auto text-xs text-gray-400">(64)</span>
+                            </label>
+                        </div>
+                    </details>
+                    <!-- Brand -->
+                    <details class="group py-2 border-b border-gray-100 dark:border-gray-800">
+                        <summary
+                            class="flex cursor-pointer items-center justify-between text-sm font-bold text-usa-blue dark:text-white list-none">
+                            Brand
+                            <span
+                                class="material-symbols-outlined text-gray-400 transition group-open:rotate-180">expand_more</span>
+                        </summary>
+                        <div class="pt-3 flex flex-col gap-2">
+                            <label class="flex items-center gap-3 cursor-pointer group/item">
+                                <input
+                                    class="size-4 rounded border-gray-300 text-primary focus:ring-primary/20 cursor-pointer"
+                                    type="checkbox" />
+                                <span class="text-sm text-gray-600 dark:text-gray-300">New Balance</span>
+                            </label>
+                            <label class="flex items-center gap-3 cursor-pointer group/item">
+                                <input
+                                    class="size-4 rounded border-gray-300 text-primary focus:ring-primary/20 cursor-pointer"
+                                    type="checkbox" />
+                                <span class="text-sm text-gray-600 dark:text-gray-300">Kookaburra</span>
+                            </label>
+                            <label class="flex items-center gap-3 cursor-pointer group/item">
+                                <input
+                                    class="size-4 rounded border-gray-300 text-primary focus:ring-primary/20 cursor-pointer"
+                                    type="checkbox" />
+                                <span class="text-sm text-gray-600 dark:text-gray-300">SG</span>
+                            </label>
+                            <label class="flex items-center gap-3 cursor-pointer group/item">
+                                <input
+                                    class="size-4 rounded border-gray-300 text-primary focus:ring-primary/20 cursor-pointer"
+                                    type="checkbox" />
+                                <span class="text-sm text-gray-600 dark:text-gray-300">GM</span>
+                            </label>
+                        </div>
+                    </details>
+                    <!-- Availability -->
+                    <details class="group py-2 border-b border-gray-100 dark:border-gray-800" open="">
+                        <summary
+                            class="flex cursor-pointer items-center justify-between text-sm font-bold text-usa-blue dark:text-white list-none">
+                            Availability
+                            <span
+                                class="material-symbols-outlined text-gray-400 transition group-open:rotate-180">expand_more</span>
+                        </summary>
+                        <div class="pt-3 flex flex-col gap-2">
+                            <label class="flex items-center gap-3 cursor-pointer group/item">
+                                <input
+                                    class="size-4 rounded border-gray-300 text-primary focus:ring-primary/20 cursor-pointer"
+                                    type="checkbox" />
+                                <span class="text-sm text-gray-600 dark:text-gray-300">In Stock</span>
+                            </label>
+                            <label class="flex items-center gap-3 cursor-pointer group/item">
+                                <input
+                                    class="size-4 rounded border-gray-300 text-primary focus:ring-primary/20 cursor-pointer"
+                                    type="checkbox" />
+                                <span class="text-sm text-gray-600 dark:text-gray-300">Pre-Order</span>
+                            </label>
+                        </div>
+                    </details>
+                </div>
+            </aside>
+            <!-- Product Grid Area -->
+            <main class="flex-1 flex flex-col gap-6">
+                <!-- Toolbar -->
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+                    <p class="text-sm text-gray-500 dark:text-gray-400 font-medium">Showing <span
+                            class="text-usa-blue dark:text-white font-bold">1-12</span> of <span
+                            class="text-usa-blue dark:text-white font-bold">48</span> products</p>
+                    <div class="flex items-center gap-3">
+                        <div class="relative">
+                            <select
+                                class="appearance-none bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-700 dark:text-gray-200 py-2 pl-4 pr-10 rounded-lg text-sm font-medium focus:border-primary focus:ring-primary">
+                                <option>Newest Arrivals</option>
+                                <option>Price: Low to High</option>
+                                <option>Price: High to Low</option>
+                                <option>Best Selling</option>
+                            </select>
+                            <div
+                                class="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-500">
+                                <span class="material-symbols-outlined text-sm">expand_more</span>
+                            </div>
+                        </div>
+                        <div class="flex bg-gray-100 dark:bg-gray-800 rounded-lg p-1 gap-1">
+                            <button
+                                class="p-1.5 rounded bg-white dark:bg-gray-700 shadow-sm text-usa-blue dark:text-white">
+                                <span class="material-symbols-outlined text-[20px]">grid_view</span>
+                            </button>
+                            <button
+                                class="p-1.5 rounded hover:bg-white/50 dark:hover:bg-gray-700 text-gray-500 dark:text-gray-400 transition-colors">
+                                <span class="material-symbols-outlined text-[20px]">view_list</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                    <!-- Product Card 1 -->
+                    <div
+                        class="group flex flex-col bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-sm hover:shadow-md border border-transparent hover:border-gray-100 dark:hover:border-gray-700 transition-all duration-300">
+                        <div class="relative aspect-[4/5] overflow-hidden bg-gray-100">
+                            <span
+                                class="absolute top-3 left-3 bg-primary text-white text-[10px] font-bold px-2 py-1 uppercase tracking-wider rounded z-10">New</span>
+                            <button
+                                class="absolute top-3 right-3 p-1.5 bg-white/80 dark:bg-black/40 rounded-full text-gray-500 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors z-10 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 duration-300">
+                                <span class="material-symbols-outlined text-[20px]">favorite</span>
+                            </button>
+                            <img alt="USA Jersey"
+                                class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                                data-alt="Official USA Cricket team jersey front view"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDT4qwVzP5wa3Wlm0-2ELkHPQlUO4Br1MKBU6LCltfzgji8PTvWBoZisK6AvcvErEFNlKSRIVUfaBpqr9Z3JZklQq-BUGlOh6-B5FGlK4M6xEXilckYgLJubZhUMCfLLPyfLd6Z13QdJdDsw30Wum-uxL7eDyJJue6lDHgTDSSoOI_OiKJjoodoot67mfihGB1wCCWivYRz0inGnm0a-oEcLwAjF1j5cTI774dXDa9un-glF528AGA1TFwE1RUlIlBCQSZmH13r0o4" />
+                        </div>
+                        <div class="p-4 flex flex-col gap-1 flex-1">
+                            <h4 class="text-xs text-gray-500 font-medium uppercase tracking-wide">Apparel</h4>
+                            <a class="text-base font-bold text-usa-blue dark:text-white hover:text-primary line-clamp-2"
+                                href="./product.html">USA Cricket 2024 Official Match Jersey</a>
+                            <div class="mt-auto pt-3 flex items-center justify-between">
+                                <span class="text-lg font-black text-primary">$65.00</span>
+                                <button
+                                    class="size-8 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-700 text-usa-blue dark:text-white hover:bg-primary hover:text-white transition-colors">
+                                    <span class="material-symbols-outlined text-[18px]">add</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product Card 2 -->
+                    <div
+                        class="group flex flex-col bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-sm hover:shadow-md border border-transparent hover:border-gray-100 dark:hover:border-gray-700 transition-all duration-300">
+                        <div class="relative aspect-[4/5] overflow-hidden bg-gray-100">
+                            <button
+                                class="absolute top-3 right-3 p-1.5 bg-white/80 dark:bg-black/40 rounded-full text-gray-500 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors z-10 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 duration-300">
+                                <span class="material-symbols-outlined text-[20px]">favorite</span>
+                            </button>
+                            <img alt="Cricket Bat"
+                                class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                                data-alt="Wooden cricket bat leaning against a wall"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoE0sZ1VnsQdbeNEkJtPP9T6rHFsCj26OrJ3xjtaqiD5yVdZznur-APT7UDN9RFuYkXaBMuBt9uMcVMKLsEeV9fqrGbSUjx8zw0gTWRpXMotn2NPIvx_UUzIMIH3dGg5Ad4EoQc1ZvFEMuAM3u_Mkmmd2H1j1sgJ2PqKUF1WKAYs4F2Xqca0Qb20arS2pLkb8MMjurdbUO1Zezjm0FDX9p3eYq9lH_9peqhKFAwkDDZhE9vVPdR6CuniR8Wa1PMvt4U9sgVxzFtTs" />
+                        </div>
+                        <div class="p-4 flex flex-col gap-1 flex-1">
+                            <h4 class="text-xs text-gray-500 font-medium uppercase tracking-wide">Bats</h4>
+                            <a class="text-base font-bold text-usa-blue dark:text-white hover:text-primary line-clamp-2"
+                                href="./product.html">Kookaburra Ghost Pro Players Bat</a>
+                            <div class="mt-auto pt-3 flex items-center justify-between">
+                                <span class="text-lg font-black text-primary">$350.00</span>
+                                <button
+                                    class="size-8 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-700 text-usa-blue dark:text-white hover:bg-primary hover:text-white transition-colors">
+                                    <span class="material-symbols-outlined text-[18px]">add</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product Card 3 -->
+                    <div
+                        class="group flex flex-col bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-sm hover:shadow-md border border-transparent hover:border-gray-100 dark:hover:border-gray-700 transition-all duration-300">
+                        <div class="relative aspect-[4/5] overflow-hidden bg-gray-100">
+                            <span
+                                class="absolute top-3 left-3 bg-gray-900 text-white text-[10px] font-bold px-2 py-1 uppercase tracking-wider rounded z-10">Sale</span>
+                            <button
+                                class="absolute top-3 right-3 p-1.5 bg-white/80 dark:bg-black/40 rounded-full text-gray-500 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors z-10 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 duration-300">
+                                <span class="material-symbols-outlined text-[20px]">favorite</span>
+                            </button>
+                            <img alt="Cricket Ball"
+                                class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                                data-alt="Red cricket ball with white stitching on grass"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBUK6EblGfrzQZctwOMDh2dL9pm5WJhD_MLrRPnSNnN6DO0L-EARX0T_n_NWexPnVfSuXNVBIKB1HISaEhbGuLeLSzmQbPyLNM98QbN7TES0RuztXnRoR06CkYX_X5urZAJHd9lVAwsHg6VhdZk4siejbnY3bNGHjYxMELsubqfLvQh_EPkfF7VcaULFme23L0cfyNbjEeF1gSeaUU4Fb2JX8VnlZQk5az4CUYWTIsAj4FjWv3quzclKH3ROzc4bkmz5XFZXmV4PWw" />
+                        </div>
+                        <div class="p-4 flex flex-col gap-1 flex-1">
+                            <h4 class="text-xs text-gray-500 font-medium uppercase tracking-wide">Accessories</h4>
+                            <a class="text-base font-bold text-usa-blue dark:text-white hover:text-primary line-clamp-2"
+                                href="./product.html">Dukes Special County A Match Ball</a>
+                            <div class="mt-auto pt-3 flex items-center justify-between">
+                                <div class="flex items-baseline gap-2">
+                                    <span class="text-lg font-black text-primary">$45.00</span>
+                                    <span class="text-xs text-gray-400 line-through">$55.00</span>
+                                </div>
+                                <button
+                                    class="size-8 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-700 text-usa-blue dark:text-white hover:bg-primary hover:text-white transition-colors">
+                                    <span class="material-symbols-outlined text-[18px]">add</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product Card 4 -->
+                    <div
+                        class="group flex flex-col bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-sm hover:shadow-md border border-transparent hover:border-gray-100 dark:hover:border-gray-700 transition-all duration-300">
+                        <div class="relative aspect-[4/5] overflow-hidden bg-gray-100">
+                            <button
+                                class="absolute top-3 right-3 p-1.5 bg-white/80 dark:bg-black/40 rounded-full text-gray-500 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors z-10 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 duration-300">
+                                <span class="material-symbols-outlined text-[20px]">favorite</span>
+                            </button>
+                            <img alt="Pads"
+                                class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                                data-alt="Cricket batting pads white and blue"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDES6w7ZFQbR3kaG70PNrk_wdZjnnw9czcuCXbhGw_lqPqbtxZXwkTSHkoP-xA5rmk3_PvAOref_Ha8BlBpPJviXj_Im7o1Jn_N_s_4K-t2UicQox4YWE7211x5K0pITU1WPKnd3ynmtvUZIWQdwkJLx-GSBOPGMxDplQlZhAfN5H1mr3eQDQUcUoxZNULQScKDoswrVYuWXdpjfxo0uYvZAElGfuO7nvk2oK34xG0_sh4bQVpPoSsz8_57yKqwkgUUCEOpW_DLVh4" />
+                        </div>
+                        <div class="p-4 flex flex-col gap-1 flex-1">
+                            <h4 class="text-xs text-gray-500 font-medium uppercase tracking-wide">Protection</h4>
+                            <a class="text-base font-bold text-usa-blue dark:text-white hover:text-primary line-clamp-2"
+                                href="./product.html">DSC Condor Batting Pads - Elite</a>
+                            <div class="mt-auto pt-3 flex items-center justify-between">
+                                <span class="text-lg font-black text-primary">$89.00</span>
+                                <button
+                                    class="size-8 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-700 text-usa-blue dark:text-white hover:bg-primary hover:text-white transition-colors">
+                                    <span class="material-symbols-outlined text-[18px]">add</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product Card 5 -->
+                    <div
+                        class="group flex flex-col bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-sm hover:shadow-md border border-transparent hover:border-gray-100 dark:hover:border-gray-700 transition-all duration-300">
+                        <div class="relative aspect-[4/5] overflow-hidden bg-gray-100">
+                            <button
+                                class="absolute top-3 right-3 p-1.5 bg-white/80 dark:bg-black/40 rounded-full text-gray-500 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors z-10 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 duration-300">
+                                <span class="material-symbols-outlined text-[20px]">favorite</span>
+                            </button>
+                            <img alt="Helmet"
+                                class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                                data-alt="Blue cricket helmet with metal grill"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfmYgmQ-W_it_XttI0JvThgmn9OMmnJdjL5VVJjJlh7h6F7rHvbDM9279VqmEcx0HXzdxi-Cf5tqZ_oUIr9efXvVELJnomzKZSvVY4NNJYn7Uv-LMr9AknSfv5YGu6ttlrRv3kZkD5BAx4k8MawYa1PkPc8f1Bvdo2hcFKC_nepie3mNKvGpNdOy-c2iUcVlbGUT_eLdcwjiFcWh46RF-dIp7txL3t_7-szoQjlUZW3S2EGplYk7HL292Qx04NIe9BaYoru5f7qQE" />
+                        </div>
+                        <div class="p-4 flex flex-col gap-1 flex-1">
+                            <h4 class="text-xs text-gray-500 font-medium uppercase tracking-wide">Protection</h4>
+                            <a class="text-base font-bold text-usa-blue dark:text-white hover:text-primary line-clamp-2"
+                                href="./product.html">Masuri Vision Series Test Helmet</a>
+                            <div class="mt-auto pt-3 flex items-center justify-between">
+                                <span class="text-lg font-black text-primary">$120.00</span>
+                                <button
+                                    class="size-8 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-700 text-usa-blue dark:text-white hover:bg-primary hover:text-white transition-colors">
+                                    <span class="material-symbols-outlined text-[18px]">add</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product Card 6 -->
+                    <div
+                        class="group flex flex-col bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-sm hover:shadow-md border border-transparent hover:border-gray-100 dark:hover:border-gray-700 transition-all duration-300">
+                        <div class="relative aspect-[4/5] overflow-hidden bg-gray-100">
+                            <span
+                                class="absolute top-3 left-3 bg-usa-blue text-white text-[10px] font-bold px-2 py-1 uppercase tracking-wider rounded z-10">Hot</span>
+                            <button
+                                class="absolute top-3 right-3 p-1.5 bg-white/80 dark:bg-black/40 rounded-full text-gray-500 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors z-10 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 duration-300">
+                                <span class="material-symbols-outlined text-[20px]">favorite</span>
+                            </button>
+                            <img alt="Gloves"
+                                class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                                data-alt="White cricket gloves with red accents"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCUxq1x-eZ2O3EvT23TOyj5Y-RLLLv3vZNEnIe1n3iJj7ryeo7DRejFd40HxMfQsQmJS1iBYM-qeytNc3_bkPsWymygslvBzemek4_fM_s4EfExMXjBb5WcTMLAr03Z4BtYTYRvxRuU9_x98qYzn6ntGor2xSxe3a3XNU7QdOBLWi7vGXvAqa8wDEsmamm7AYgLp4NgJvaAEmOB-0tPuc7xQe6YcI71TJ9cKKihVFVQ9oEODFcS3u4HNfujCc4huf2J9WiXsCZS2nU" />
+                        </div>
+                        <div class="p-4 flex flex-col gap-1 flex-1">
+                            <h4 class="text-xs text-gray-500 font-medium uppercase tracking-wide">Protection</h4>
+                            <a class="text-base font-bold text-usa-blue dark:text-white hover:text-primary line-clamp-2"
+                                href="./product.html">GM Original Batting Gloves</a>
+                            <div class="mt-auto pt-3 flex items-center justify-between">
+                                <span class="text-lg font-black text-primary">$49.99</span>
+                                <button
+                                    class="size-8 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-700 text-usa-blue dark:text-white hover:bg-primary hover:text-white transition-colors">
+                                    <span class="material-symbols-outlined text-[18px]">add</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product Card 7 -->
+                    <div
+                        class="group flex flex-col bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-sm hover:shadow-md border border-transparent hover:border-gray-100 dark:hover:border-gray-700 transition-all duration-300">
+                        <div class="relative aspect-[4/5] overflow-hidden bg-gray-100">
+                            <button
+                                class="absolute top-3 right-3 p-1.5 bg-white/80 dark:bg-black/40 rounded-full text-gray-500 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors z-10 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 duration-300">
+                                <span class="material-symbols-outlined text-[20px]">favorite</span>
+                            </button>
+                            <img alt="Cap"
+                                class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                                data-alt="Navy blue sport cap with logo"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVGm9OmKkVPpf1hlyPYfByT2nw-mfCg3wddQuSn6NVsXZaYTOHPRb5-wFgLdNsrsreqaXCHXcct_ooy90TnCSFFI9xE0Un8K8_pyh1xHTRYDOXNlAYuo3B0T4aToTpaq3iEJneZnQjbN3za2K5lXh5fzRjwHQ4y0H-tn8tESOrAbaMG4MQW0g6rZwWV3MXJNi5CapqR4U6gAPQ9EizVhvxGflVDTVXnWtBAPwOBoDBzw8i4VYGOgaCAvVsCgT9WU2Og5cWsv4jDn8" />
+                        </div>
+                        <div class="p-4 flex flex-col gap-1 flex-1">
+                            <h4 class="text-xs text-gray-500 font-medium uppercase tracking-wide">Fan Gear</h4>
+                            <a class="text-base font-bold text-usa-blue dark:text-white hover:text-primary line-clamp-2"
+                                href="./product.html">Team USA Fan Cap - Navy</a>
+                            <div class="mt-auto pt-3 flex items-center justify-between">
+                                <span class="text-lg font-black text-primary">$25.00</span>
+                                <button
+                                    class="size-8 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-700 text-usa-blue dark:text-white hover:bg-primary hover:text-white transition-colors">
+                                    <span class="material-symbols-outlined text-[18px]">add</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product Card 8 -->
+                    <div
+                        class="group flex flex-col bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-sm hover:shadow-md border border-transparent hover:border-gray-100 dark:hover:border-gray-700 transition-all duration-300">
+                        <div class="relative aspect-[4/5] overflow-hidden bg-gray-100">
+                            <button
+                                class="absolute top-3 right-3 p-1.5 bg-white/80 dark:bg-black/40 rounded-full text-gray-500 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors z-10 opacity-0 group-hover:opacity-100 translate-y-2 group-hover:translate-y-0 duration-300">
+                                <span class="material-symbols-outlined text-[20px]">favorite</span>
+                            </button>
+                            <img alt="Bag"
+                                class="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                                data-alt="Large cricket kit bag with wheels"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDf9mKQ1i0f_2tg9S8itIP1tRHukdbtmTDBRrkJtMpJnsOJD5MtQ6EqLSWyA6SLTDj8dQmJnolhP-dymRzRJXf7VWG6I5ZQivdtRPwpGnIRRCZIPzqLoh-U-u2AeaVyNrrnzXin7QsbxVJVAi6PhkDtxKZ2MmQPB7x9prIyp4eMuDe771n7VqhCoF_8yrZDPOfrK1J_ZKkanqsUOGUcalojfAo-9qDl5fq2UVIw-aWjKMg2GF71wxvOSoXFmer81ZljKEdKwZpnebQ" />
+                        </div>
+                        <div class="p-4 flex flex-col gap-1 flex-1">
+                            <h4 class="text-xs text-gray-500 font-medium uppercase tracking-wide">Accessories</h4>
+                            <a class="text-base font-bold text-usa-blue dark:text-white hover:text-primary line-clamp-2"
+                                href="./product.html">Pro Player Wheelie Bag</a>
+                            <div class="mt-auto pt-3 flex items-center justify-between">
+                                <span class="text-lg font-black text-primary">$110.00</span>
+                                <button
+                                    class="size-8 flex items-center justify-center rounded-full bg-gray-100 dark:bg-gray-700 text-usa-blue dark:text-white hover:bg-primary hover:text-white transition-colors">
+                                    <span class="material-symbols-outlined text-[18px]">add</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Pagination -->
+                <div class="mt-8 flex justify-center pb-10">
+                    <nav
+                        class="flex items-center gap-1 bg-white dark:bg-gray-800 p-1 rounded-lg shadow-sm border border-gray-100 dark:border-gray-700">
+                        <a class="size-9 flex items-center justify-center rounded-md text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-gray-300"
+                            href="#">
+                            <span class="material-symbols-outlined text-sm">chevron_left</span>
+                        </a>
+                        <a class="size-9 flex items-center justify-center rounded-md bg-primary text-white font-bold text-sm"
+                            href="#">1</a>
+                        <a class="size-9 flex items-center justify-center rounded-md text-gray-600 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700 text-sm font-medium"
+                            href="#">2</a>
+                        <a class="size-9 flex items-center justify-center rounded-md text-gray-600 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700 text-sm font-medium"
+                            href="#">3</a>
+                        <span class="size-9 flex items-center justify-center text-gray-400">...</span>
+                        <a class="size-9 flex items-center justify-center rounded-md text-gray-600 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700 text-sm font-medium"
+                            href="#">8</a>
+                        <a class="size-9 flex items-center justify-center rounded-md text-gray-500 hover:bg-gray-100 dark:hover:bg-gray-700 dark:text-gray-300"
+                            href="#">
+                            <span class="material-symbols-outlined text-sm">chevron_right</span>
+                        </a>
+                    </nav>
+                </div>
+            </main>
+        </div>
+    </div>
+    <!-- Simple Footer -->
+    <footer class="bg-usa-blue text-white py-12">
+        <div class="max-w-[1440px] mx-auto px-4 md:px-10 grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="col-span-1 md:col-span-1">
+                <div class="flex items-center gap-3 mb-4">
+                    <div class="size-8 text-white">
+                        <svg fill="currentColor" viewbox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                            <path clip-rule="evenodd"
+                                d="M24 18.4228L42 11.475V34.3663C42 34.7796 41.7457 35.1504 41.3601 35.2992L24 42V18.4228Z"
+                                fill="#f20d0d" fill-rule="evenodd"></path>
+                            <path clip-rule="evenodd"
+                                d="M24 8.18819L33.4123 11.574L24 15.2071L14.5877 11.574L24 8.18819ZM9 15.8487L21 20.4805V37.6263L9 32.9945V15.8487ZM27 37.6263V20.4805L39 15.8487V32.9945L27 37.6263ZM25.354 2.29885C24.4788 1.98402 23.5212 1.98402 22.646 2.29885L4.98454 8.65208C3.7939 9.08038 3 10.2097 3 11.475V34.3663C3 36.0196 4.01719 37.5026 5.55962 38.098L22.9197 44.7987C23.6149 45.0671 24.3851 45.0671 25.0803 44.7987L42.4404 38.098C43.9828 37.5026 45 36.0196 45 34.3663V11.475C45 10.2097 44.2061 9.08038 43.0155 8.65208L25.354 2.29885Z"
+                                fill="currentColor" fill-rule="evenodd"></path>
+                        </svg>
+                    </div>
+                    <h2 class="text-xl font-black uppercase">USA Cricket Hub</h2>
+                </div>
+                <p class="text-blue-100 text-sm leading-relaxed">The official destination for cricket enthusiasts in the
+                    USA. From the grassroots to the national team.</p>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4 text-white">Shop</h4>
+                <ul class="flex flex-col gap-2 text-sm text-blue-100">
+                    <li><a class="hover:text-white" href="#">New Arrivals</a></li>
+                    <li><a class="hover:text-white" href="#">Bats &amp; Equipment</a></li>
+                    <li><a class="hover:text-white" href="#">Official Jerseys</a></li>
+                    <li><a class="hover:text-white" href="#">Clearance</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4 text-white">Support</h4>
+                <ul class="flex flex-col gap-2 text-sm text-blue-100">
+                    <li><a class="hover:text-white" href="#">Order Status</a></li>
+                    <li><a class="hover:text-white" href="#">Shipping &amp; Returns</a></li>
+                    <li><a class="hover:text-white" href="#">Size Guide</a></li>
+                    <li><a class="hover:text-white" href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-bold mb-4 text-white">Join the Community</h4>
+                <p class="text-sm text-blue-100 mb-4">Sign up for exclusive offers and cricket news.</p>
+                <div class="flex gap-2">
+                    <input
+                        class="bg-white/10 border-white/20 text-white placeholder:text-blue-200 text-sm rounded-lg px-3 py-2 w-full focus:ring-0 focus:border-white"
+                        placeholder="Email address" type="email" />
+                    <button
+                        class="bg-primary hover:bg-red-600 text-white font-bold rounded-lg px-4 text-sm transition-colors">Go</button>
+                </div>
+            </div>
+        </div>
+        <div
+            class="max-w-[1440px] mx-auto px-4 md:px-10 mt-12 pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center text-xs text-blue-200">
+            <p>© 2024 USA Cricket Hub. All rights reserved.</p>
+            <div class="flex gap-4 mt-4 md:mt-0">
+                <a class="hover:text-white" href="#">Privacy Policy</a>
+                <a class="hover:text-white" href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

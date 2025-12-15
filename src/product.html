@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Product Detail - USA Cricket Hub</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&amp;display=swap" rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./assets/css/styles.css">
+
+    <style>
+        body {
+            font-family: 'Lexend', sans-serif;
+        }
+    </style>
+</head>
+
+<body
+    class="bg-background-light dark:bg-background-dark text-[#1c0d0d] dark:text-white antialiased transition-colors duration-200">
+    <div class="relative flex min-h-screen flex-col overflow-x-hidden">
+        <!-- Top Navigation -->
+        <header
+            class="sticky top-0 z-50 w-full border-b border-[#e5e7eb] bg-background-light/95 backdrop-blur-sm dark:bg-background-dark/95 dark:border-[#3a2e2e]">
+            <div class="px-4 md:px-10 py-3 flex items-center justify-between">
+                <div class="flex items-center gap-8">
+                    <a class="flex items-center gap-3 text-secondary dark:text-white group" href="./index.html">
+                        <div class="size-8 text-primary">
+                            <!-- Cricket Logo Icon -->
+                            <svg class="w-full h-full" fill="none" viewbox="0 0 48 48"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44Z"
+                                    stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="4"></path>
+                                <path d="M24 12V36" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="4"></path>
+                                <path d="M16 24H32" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="4"></path>
+                                <path d="M12 24C12 24 16 16 24 16" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" stroke-width="4"></path>
+                                <path d="M36 24C36 24 32 32 24 32" stroke="currentColor" stroke-linecap="round"
+                                    stroke-linejoin="round" stroke-width="4"></path>
+                            </svg>
+                        </div>
+                        <h2 class="text-xl font-bold tracking-tight text-secondary dark:text-white">USA Cricket Hub</h2>
+                    </a>
+                    <nav class="hidden lg:flex items-center gap-6">
+                        <a class="text-secondary/80 dark:text-white/80 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors"
+                            href="./shop.html">Shop</a>
+                        <a class="text-secondary/80 dark:text-white/80 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors"
+                            href="#">Team</a>
+                        <a class="text-secondary/80 dark:text-white/80 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors"
+                            href="./community.html">News</a>
+                        <a class="text-secondary/80 dark:text-white/80 hover:text-primary dark:hover:text-primary text-sm font-medium transition-colors"
+                            href="./community.html">Community</a>
+                    </nav>
+                </div>
+                <div class="flex items-center gap-4">
+                    <div class="hidden md:flex relative">
+                        <span
+                            class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-lg">search</span>
+                        <input
+                            class="h-10 w-64 rounded-full border border-gray-200 bg-neutral-surface pl-10 pr-4 text-sm focus:border-primary focus:ring-1 focus:ring-primary dark:bg-[#3a2e2e] dark:border-[#4a3e3e] dark:text-white placeholder:text-gray-400"
+                            placeholder="Search products..." type="text" />
+                    </div>
+                    <button class="relative p-2 text-secondary dark:text-white hover:text-primary transition-colors">
+                        <span class="material-symbols-outlined">shopping_cart</span>
+                        <span
+                            class="absolute top-1 right-0 flex h-4 w-4 items-center justify-center rounded-full bg-primary text-[10px] font-bold text-white">2</span>
+                    </button>
+                    <button class="p-2 text-secondary dark:text-white hover:text-primary transition-colors">
+                        <span class="material-symbols-outlined">account_circle</span>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <!-- Main Content -->
+        <main class="flex-1 w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <!-- Breadcrumbs -->
+            <nav aria-label="Breadcrumb" class="flex mb-8">
+                <ol class="flex items-center space-x-2">
+                    <li><a class="text-gray-500 hover:text-primary dark:text-gray-400 text-sm font-medium"
+                            href="#">Home</a></li>
+                    <li><span class="text-gray-300 dark:text-gray-600">/</span></li>
+                    <li><a class="text-gray-500 hover:text-primary dark:text-gray-400 text-sm font-medium"
+                            href="#">Shop</a></li>
+                    <li><span class="text-gray-300 dark:text-gray-600">/</span></li>
+                    <li><a class="text-gray-500 hover:text-primary dark:text-gray-400 text-sm font-medium"
+                            href="#">Jerseys</a></li>
+                    <li><span class="text-gray-300 dark:text-gray-600">/</span></li>
+                    <li><span aria-current="page" class="text-secondary dark:text-white text-sm font-medium">Men's
+                            Official USA T20 Jersey</span></li>
+                </ol>
+            </nav>
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 xl:gap-16">
+                <!-- Left Column: Product Gallery -->
+                <div class="space-y-4">
+                    <div
+                        class="relative aspect-square w-full overflow-hidden rounded-xl bg-neutral-surface border border-gray-100 dark:border-gray-800 dark:bg-[#2a1e1e]">
+                        <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAdKxM-bactj7a5x2sbTfXkZ_c0-VqqV3HH0dFvlWlP5pSoqDoPT0jYWiSxCbgm9hwgwJUdKXCg76JQT1c8z77-zTblhWS23pKjbo88La3PUgDhdLt1gTqXBX2PIeL8koYY0UaG78e4gUKjLrl8-PtHAVMl_Oy1l6WSIatjIXsR7YrjSwemtVhniQU3hxipM6l8ngPMbdhTy8lfwzm9RE_K4OH4G5lY8cMd2dAvo7U7xMXlyDqvQo-K_eFB_UE9aM_A2KgijRLM9ns"
+                            alt="Close up of sports jersey fabric texture"
+                            class="absolute inset-0 h-full w-full object-cover object-center">
+                        <div class="absolute top-4 left-4">
+                            <span
+                                class="inline-flex items-center rounded-md bg-secondary px-2.5 py-1 text-xs font-bold text-white shadow-sm ring-1 ring-inset ring-white/10">Official
+                                Kit</span>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-4 gap-4">
+                        <button
+                            class="aspect-square overflow-hidden rounded-lg border-2 border-primary ring-2 ring-primary/20 p-0.5">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuDa7keUWi4Nttzl5mmWcbZkn0rPtvCvBi9ymU7gnsfIYsz2WpVDG-ozP8C24frVhFI7Ge56lh1jy4S1p4YPEtPjfu_W4Z-mT0hfDckn0PGLb4CcZ0YNM8s-tHhwwME12jrgG8dlaCMttpgRkZD_RHKUQoHLvTe1SR_aSyOxe4QajXyqpvTfplMlPlL3MESmXAy3wJiAPCnKAddfrUIJyq5yOZlaw51vQPocZbLdPcJX9ouk94FKjWu4OL2LlmhMIlJlu0Qcb0NjdXc"
+                                alt="Thumbnail 1 main jersey view"
+                                class="h-full w-full rounded object-cover object-center">
+                        </button>
+                        <button
+                            class="aspect-square overflow-hidden rounded-lg border-2 border-transparent hover:border-gray-200 dark:hover:border-gray-700 bg-neutral-surface">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7DMtcI3xgcpt4GNRs9ryUDjudxHt3HHab64xi0-fYrOBKPr9DlUKEfzJMUXKfJef1bSfmQbHgGdM5tmz6WDRFZsG4-AHbsV4FuumhaYk47wFKMMqWGqM-acKX7ZmP0r4Y31V8Ilz44LDasgUovgi4EmpuHRNF7yPcYQBGHaGtGpbTAyOYP5EzL_YTdaXtg6fEt1ADcMNnDSgYvcqOGLKZj77u83tk8g8YyZFhCoXq4BF0kfXvt9z-8YbCCAZGDtVApTamLsGu-t4"
+                                alt="Thumbnail 2 side jersey view"
+                                class="h-full w-full rounded object-cover object-center">
+                        </button>
+                        <button
+                            class="aspect-square overflow-hidden rounded-lg border-2 border-transparent hover:border-gray-200 dark:hover:border-gray-700 bg-neutral-surface">
+                            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuCW01k80jUH8aDlHshxgHK9uIAtzXoEIyH9D0IHz1zbrXZPXeQ9etVB07W-887EaVk4o4gGSruDpHDNtWRnFPNjQD8M6EMylMENS6y6SHzNcEp2oI1f5whsnI6l0coP9a3b3c359fpvuGT7Op0QqdP0KJqW2HozqdJb1EYlwUYvvtmoFMbSiNagH7s3-Af5KTG_yspmYDWMJ-RSkCzUMytn3Qfp8k-lxZtWm4OsPj_Cr03JV88BCLgZPiL9ETcMqIhVDgxxkKz4EbA"
+                                alt="Thumbnail 3 back jersey view"
+                                class="h-full w-full rounded object-cover object-center">
+                        </button>
+                        <button
+                            class="aspect-square overflow-hidden rounded-lg border-2 border-transparent hover:border-gray-200 dark:hover:border-gray-700 bg-neutral-surface flex items-center justify-center text-secondary/50">
+                            <span class="material-symbols-outlined">play_circle</span>
+                        </button>
+                    </div>
+                </div>
+                <!-- Right Column: Product Details -->
+                <div class="flex flex-col gap-6">
+                    <div class="border-b border-gray-100 dark:border-gray-800 pb-6">
+                        <h1
+                            class="text-3xl sm:text-4xl font-black text-secondary dark:text-white tracking-tight leading-tight">
+                            Men's Official USA Cricket T20 World Cup Jersey
+                        </h1>
+                        <div class="mt-4 flex items-center justify-between">
+                            <div class="flex items-baseline gap-2">
+                                <span class="text-3xl font-bold text-primary">$85.00</span>
+                                <span class="text-lg text-gray-400 line-through">$100.00</span>
+                            </div>
+                            <div class="flex items-center gap-1">
+                                <div class="flex text-yellow-400">
+                                    <span class="material-symbols-outlined text-[20px] fill-current">star</span>
+                                    <span class="material-symbols-outlined text-[20px] fill-current">star</span>
+                                    <span class="material-symbols-outlined text-[20px] fill-current">star</span>
+                                    <span class="material-symbols-outlined text-[20px] fill-current">star</span>
+                                    <span class="material-symbols-outlined text-[20px] fill-current">star_half</span>
+                                </div>
+                                <span
+                                    class="ml-2 text-sm font-medium text-secondary underline cursor-pointer dark:text-gray-300">120
+                                    reviews</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Color Selection -->
+                    <div>
+                        <h3 class="text-sm font-medium text-gray-900 dark:text-gray-200 mb-3">Select Color</h3>
+                        <div class="flex items-center gap-3">
+                            <label class="relative cursor-pointer">
+                                <input checked="" class="peer sr-only" name="color" type="radio" />
+                                <div
+                                    class="h-10 w-10 rounded-full border border-gray-200 bg-[#0a3161] ring-2 ring-transparent ring-offset-2 transition-all peer-checked:ring-primary dark:ring-offset-gray-900">
+                                </div>
+                            </label>
+                            <label class="relative cursor-pointer">
+                                <input class="peer sr-only" name="color" type="radio" />
+                                <div
+                                    class="h-10 w-10 rounded-full border border-gray-200 bg-[#ffffff] ring-2 ring-transparent ring-offset-2 transition-all peer-checked:ring-primary dark:ring-offset-gray-900">
+                                </div>
+                            </label>
+                            <label class="relative cursor-pointer">
+                                <input class="peer sr-only" name="color" type="radio" />
+                                <div
+                                    class="h-10 w-10 rounded-full border border-gray-200 bg-[#f20d0d] ring-2 ring-transparent ring-offset-2 transition-all peer-checked:ring-primary dark:ring-offset-gray-900">
+                                </div>
+                            </label>
+                        </div>
+                    </div>
+                    <!-- Size Selection -->
+                    <div>
+                        <div class="flex items-center justify-between mb-3">
+                            <h3 class="text-sm font-medium text-gray-900 dark:text-gray-200">Select Size</h3>
+                            <button
+                                class="text-sm font-medium text-secondary dark:text-blue-300 underline decoration-primary decoration-2 underline-offset-4">Size
+                                Guide</button>
+                        </div>
+                        <div class="grid grid-cols-3 sm:grid-cols-6 gap-3">
+                            <label class="cursor-pointer">
+                                <input class="peer sr-only" name="size" type="radio" />
+                                <div
+                                    class="flex h-10 items-center justify-center rounded-lg border border-gray-200 bg-white text-sm font-medium text-gray-900 hover:bg-gray-50 peer-checked:border-secondary peer-checked:bg-secondary peer-checked:text-white transition-colors dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:peer-checked:bg-secondary">
+                                    XS</div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input class="peer sr-only" name="size" type="radio" />
+                                <div
+                                    class="flex h-10 items-center justify-center rounded-lg border border-gray-200 bg-white text-sm font-medium text-gray-900 hover:bg-gray-50 peer-checked:border-secondary peer-checked:bg-secondary peer-checked:text-white transition-colors dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:peer-checked:bg-secondary">
+                                    S</div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input checked="" class="peer sr-only" name="size" type="radio" />
+                                <div
+                                    class="flex h-10 items-center justify-center rounded-lg border border-gray-200 bg-white text-sm font-medium text-gray-900 hover:bg-gray-50 peer-checked:border-secondary peer-checked:bg-secondary peer-checked:text-white transition-colors dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:peer-checked:bg-secondary">
+                                    M</div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input class="peer sr-only" name="size" type="radio" />
+                                <div
+                                    class="flex h-10 items-center justify-center rounded-lg border border-gray-200 bg-white text-sm font-medium text-gray-900 hover:bg-gray-50 peer-checked:border-secondary peer-checked:bg-secondary peer-checked:text-white transition-colors dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:peer-checked:bg-secondary">
+                                    L</div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input class="peer sr-only" name="size" type="radio" />
+                                <div
+                                    class="flex h-10 items-center justify-center rounded-lg border border-gray-200 bg-white text-sm font-medium text-gray-900 hover:bg-gray-50 peer-checked:border-secondary peer-checked:bg-secondary peer-checked:text-white transition-colors dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:peer-checked:bg-secondary">
+                                    XL</div>
+                            </label>
+                            <label class="cursor-pointer">
+                                <input class="peer sr-only" name="size" type="radio" />
+                                <div
+                                    class="flex h-10 items-center justify-center rounded-lg border border-gray-200 bg-white text-sm font-medium text-gray-900 hover:bg-gray-50 peer-checked:border-secondary peer-checked:bg-secondary peer-checked:text-white transition-colors dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:peer-checked:bg-secondary">
+                                    XXL</div>
+                            </label>
+                        </div>
+                    </div>
+                    <!-- Quantity & Add to Cart -->
+                    <div class="pt-4 flex flex-col sm:flex-row gap-4">
+                        <div class="flex items-center rounded-lg border border-gray-300 dark:border-gray-600">
+                            <button
+                                class="h-12 w-12 flex items-center justify-center text-gray-600 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700 rounded-l-lg transition-colors">
+                                <span class="material-symbols-outlined text-sm">remove</span>
+                            </button>
+                            <input
+                                class="h-12 w-12 border-none bg-transparent text-center text-base font-medium focus:ring-0 dark:text-white"
+                                readonly="" type="number" value="1" />
+                            <button
+                                class="h-12 w-12 flex items-center justify-center text-gray-600 hover:bg-gray-100 dark:text-gray-300 dark:hover:bg-gray-700 rounded-r-lg transition-colors">
+                                <span class="material-symbols-outlined text-sm">add</span>
+                            </button>
+                        </div>
+                        <button
+                            class="flex-1 h-12 bg-primary hover:bg-red-700 text-white font-bold rounded-lg shadow-md hover:shadow-lg transition-all flex items-center justify-center gap-2">
+                            <span class="material-symbols-outlined">shopping_cart</span>
+                            Add to Cart
+                        </button>
+                    </div>
+                    <!-- Community Badge -->
+                    <div
+                        class="flex items-center gap-3 bg-blue-50 p-4 rounded-lg border border-blue-100 dark:bg-blue-900/20 dark:border-blue-800/50">
+                        <div
+                            class="h-10 w-10 flex-shrink-0 flex items-center justify-center rounded-full bg-secondary text-white">
+                            <span class="material-symbols-outlined">diversity_3</span>
+                        </div>
+                        <div>
+                            <p class="text-sm font-bold text-secondary dark:text-blue-100">Supports Youth Cricket</p>
+                            <p class="text-xs text-gray-600 dark:text-gray-400">10% of proceeds go towards developing
+                                youth cricket programs across the USA.</p>
+                        </div>
+                    </div>
+                    <!-- Accordion Details -->
+                    <div
+                        class="mt-4 divide-y divide-gray-100 dark:divide-gray-800 border-t border-gray-100 dark:border-gray-800">
+                        <details class="group py-4" open="">
+                            <summary
+                                class="flex cursor-pointer items-center justify-between text-base font-medium text-gray-900 dark:text-white list-none">
+                                <span>Description</span>
+                                <span class="transition group-open:rotate-180">
+                                    <span class="material-symbols-outlined">expand_more</span>
+                                </span>
+                            </summary>
+                            <div class="mt-4 text-sm leading-relaxed text-gray-600 dark:text-gray-300">
+                                <p>Engineered for the modern cricketer, this official USA Cricket T20 jersey combines
+                                    performance technology with national pride. Featuring moisture-wicking fabric to
+                                    keep you dry and cool during intense matches or while cheering from the stands.</p>
+                            </div>
+                        </details>
+                        <details class="group py-4">
+                            <summary
+                                class="flex cursor-pointer items-center justify-between text-base font-medium text-gray-900 dark:text-white list-none">
+                                <span>Specifications</span>
+                                <span class="transition group-open:rotate-180">
+                                    <span class="material-symbols-outlined">expand_more</span>
+                                </span>
+                            </summary>
+                            <div class="mt-4 text-sm leading-relaxed text-gray-600 dark:text-gray-300">
+                                <ul class="list-disc pl-5 space-y-1">
+                                    <li>100% Recycled Polyester</li>
+                                    <li>Athletic fit</li>
+                                    <li>Heat-sealed USA Cricket crest</li>
+                                    <li>Machine wash cold</li>
+                                </ul>
+                            </div>
+                        </details>
+                        <details class="group py-4">
+                            <summary
+                                class="flex cursor-pointer items-center justify-between text-base font-medium text-gray-900 dark:text-white list-none">
+                                <span>Shipping &amp; Returns</span>
+                                <span class="transition group-open:rotate-180">
+                                    <span class="material-symbols-outlined">expand_more</span>
+                                </span>
+                            </summary>
+                            <div class="mt-4 text-sm leading-relaxed text-gray-600 dark:text-gray-300">
+                                <p>Free shipping on orders over $150. Returns accepted within 30 days of purchase with
+                                    original tags attached.</p>
+                            </div>
+                        </details>
+                    </div>
+                </div>
+            </div>
+            <!-- Reviews Section -->
+            <section class="mt-20 border-t border-gray-200 dark:border-gray-800 pt-16">
+                <h2 class="text-2xl font-bold text-secondary dark:text-white mb-8">Customer Reviews</h2>
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                    <!-- Rating Summary -->
+                    <div class="lg:col-span-4 bg-neutral-surface dark:bg-[#2a1e1e] p-8 rounded-xl h-fit">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="text-5xl font-black text-secondary dark:text-white">4.8</div>
+                            <div>
+                                <div class="flex text-yellow-400">
+                                    <span class="material-symbols-outlined text-[20px] fill-current">star</span>
+                                    <span class="material-symbols-outlined text-[20px] fill-current">star</span>
+                                    <span class="material-symbols-outlined text-[20px] fill-current">star</span>
+                                    <span class="material-symbols-outlined text-[20px] fill-current">star</span>
+                                    <span class="material-symbols-outlined text-[20px] fill-current">star_half</span>
+                                </div>
+                                <p class="text-sm text-gray-500 mt-1">Based on 120 reviews</p>
+                            </div>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="flex items-center gap-3">
+                                <span class="text-xs font-medium w-3">5</span>
+                                <div class="flex-1 h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                                    <div class="h-full bg-primary rounded-full" style="width: 80%"></div>
+                                </div>
+                                <span class="text-xs text-gray-500 w-8 text-right">80%</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="text-xs font-medium w-3">4</span>
+                                <div class="flex-1 h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                                    <div class="h-full bg-primary rounded-full" style="width: 12%"></div>
+                                </div>
+                                <span class="text-xs text-gray-500 w-8 text-right">12%</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="text-xs font-medium w-3">3</span>
+                                <div class="flex-1 h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                                    <div class="h-full bg-primary rounded-full" style="width: 5%"></div>
+                                </div>
+                                <span class="text-xs text-gray-500 w-8 text-right">5%</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="text-xs font-medium w-3">2</span>
+                                <div class="flex-1 h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                                    <div class="h-full bg-primary rounded-full" style="width: 1%"></div>
+                                </div>
+                                <span class="text-xs text-gray-500 w-8 text-right">1%</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <span class="text-xs font-medium w-3">1</span>
+                                <div class="flex-1 h-2 bg-gray-200 dark:bg-gray-700 rounded-full overflow-hidden">
+                                    <div class="h-full bg-primary rounded-full" style="width: 2%"></div>
+                                </div>
+                                <span class="text-xs text-gray-500 w-8 text-right">2%</span>
+                            </div>
+                        </div>
+                        <button
+                            class="w-full mt-8 py-3 border border-secondary text-secondary font-medium rounded-lg hover:bg-secondary hover:text-white transition-colors dark:border-gray-500 dark:text-gray-300 dark:hover:bg-white dark:hover:text-black">Write
+                            a Review</button>
+                    </div>
+                    <!-- Review List -->
+                    <div class="lg:col-span-8 space-y-8">
+                        <div class="border-b border-gray-100 dark:border-gray-800 pb-8">
+                            <div class="flex justify-between items-start mb-2">
+                                <div class="flex items-center gap-2">
+                                    <div
+                                        class="h-10 w-10 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center text-lg font-bold text-gray-600 dark:text-gray-300">
+                                        RK</div>
+                                    <div>
+                                        <h4 class="text-sm font-bold text-secondary dark:text-white">Rahul K.</h4>
+                                        <span class="text-xs text-green-600 font-medium">Verified Buyer</span>
+                                    </div>
+                                </div>
+                                <span class="text-xs text-gray-400">2 days ago</span>
+                            </div>
+                            <div class="flex text-primary mb-3 text-sm">
+                                <span class="material-symbols-outlined fill-current text-[16px]">star</span>
+                                <span class="material-symbols-outlined fill-current text-[16px]">star</span>
+                                <span class="material-symbols-outlined fill-current text-[16px]">star</span>
+                                <span class="material-symbols-outlined fill-current text-[16px]">star</span>
+                                <span class="material-symbols-outlined fill-current text-[16px]">star</span>
+                            </div>
+                            <h5 class="text-base font-bold text-gray-900 dark:text-white mb-2">Perfect fit for the World
+                                Cup!</h5>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                                The material is amazing, very breathable for those hot days. I wore it to the match in
+                                Dallas and got so many compliments. Go USA!
+                            </p>
+                        </div>
+                        <div class="border-b border-gray-100 dark:border-gray-800 pb-8">
+                            <div class="flex justify-between items-start mb-2">
+                                <div class="flex items-center gap-2">
+                                    <div
+                                        class="h-10 w-10 rounded-full bg-gray-200 dark:bg-gray-700 flex items-center justify-center text-lg font-bold text-gray-600 dark:text-gray-300">
+                                        SJ</div>
+                                    <div>
+                                        <h4 class="text-sm font-bold text-secondary dark:text-white">Sarah J.</h4>
+                                        <span class="text-xs text-green-600 font-medium">Verified Buyer</span>
+                                    </div>
+                                </div>
+                                <span class="text-xs text-gray-400">1 week ago</span>
+                            </div>
+                            <div class="flex text-primary mb-3 text-sm">
+                                <span class="material-symbols-outlined fill-current text-[16px]">star</span>
+                                <span class="material-symbols-outlined fill-current text-[16px]">star</span>
+                                <span class="material-symbols-outlined fill-current text-[16px]">star</span>
+                                <span class="material-symbols-outlined fill-current text-[16px]">star</span>
+                                <span class="material-symbols-outlined text-[16px]">star</span>
+                            </div>
+                            <h5 class="text-base font-bold text-gray-900 dark:text-white mb-2">Runs slightly small</h5>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                                Great quality jersey, but I'd recommend sizing up if you prefer a looser fit. The
+                                exchange process was super easy though.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Related Products -->
+            <section class="mt-20 mb-10">
+                <div class="flex items-center justify-between mb-8">
+                    <h2 class="text-2xl font-bold text-secondary dark:text-white">Complete the Kit</h2>
+                    <a class="text-sm font-bold text-primary hover:underline" href="#">View All</a>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <!-- Product Card 1 -->
+                    <div class="group relative flex flex-col">
+                        <div class="aspect-[3/4] w-full overflow-hidden rounded-lg bg-gray-200">
+                            <img alt="Cricket bat on grass field"
+                                class="h-full w-full object-cover object-center group-hover:opacity-75 transition-opacity"
+                                data-alt="Cricket bat leaning on stumps"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCku8yBbNmRLRZrDF5E5ivFQjsogg_IqJxPAeE8A2K-il3QSk_tM2LNrvvpDXUMy6sBjt5sjbGCGptYLvf2KFnW87k-IdSIsayULxRZP4-XScWmVl4p8DOpcf5PyL0MPwDOIDtXmLIS5Ovt7aqUDAQdSDKPz9L0_QJci_BWmJ999ytDlEdSLKszlGLDvprFIJlGGGZDdGRIwOI1_DxYIbpjCRDhvT0F-Jh8-pf9X3GwMaPVpWR11N6vj0degvT1U3FwziBDcCCEUt0" />
+                            <div
+                                class="absolute top-2 right-2 rounded bg-white px-2 py-1 text-xs font-bold text-secondary shadow-sm">
+                                New</div>
+                        </div>
+                        <div class="mt-4 flex justify-between">
+                            <div>
+                                <h3 class="text-sm text-gray-700 dark:text-gray-200">
+                                    <a href="#">
+                                        <span aria-hidden="true" class="absolute inset-0"></span>
+                                        USA Training Cap
+                                    </a>
+                                </h3>
+                                <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">One Size / Navy</p>
+                            </div>
+                            <p class="text-sm font-medium text-gray-900 dark:text-white">$35.00</p>
+                        </div>
+                    </div>
+                    <!-- Product Card 2 -->
+                    <div class="group relative flex flex-col">
+                        <div class="aspect-[3/4] w-full overflow-hidden rounded-lg bg-gray-200">
+                            <img alt="Blue sports backpack texture"
+                                class="h-full w-full object-cover object-center group-hover:opacity-75 transition-opacity"
+                                data-alt="Close up of blue backpack fabric"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuACyvJkyNzl7_Dt81aU0f3p0PSUaQssuxUp2N1JzSha5l3f-GMKogOhd0wiyvS43GvS48HFmMbs6iaKOkS4m1n6DsrGsImFnuxjbwdnC80wjkmXODfYiWgm8EL98waKWHkBorI5n4QY6v-DLGlu-hStbeM84ZtnXB2AybFQJQnkFHxH2qJGpfmW1xYAHjsnqr2PQJ1t2p0V7uqgW3TzJMUo0ORQiCLR7AEi0t4sdcyyvCUqfzVFZiKtEe1CZnX6EYhRRMRbMPMmqBo" />
+                        </div>
+                        <div class="mt-4 flex justify-between">
+                            <div>
+                                <h3 class="text-sm text-gray-700 dark:text-gray-200">
+                                    <a href="#">
+                                        <span aria-hidden="true" class="absolute inset-0"></span>
+                                        Team Backpack
+                                    </a>
+                                </h3>
+                                <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">25L Capacity</p>
+                            </div>
+                            <p class="text-sm font-medium text-gray-900 dark:text-white">$65.00</p>
+                        </div>
+                    </div>
+                    <!-- Product Card 3 -->
+                    <div class="group relative flex flex-col">
+                        <div class="aspect-[3/4] w-full overflow-hidden rounded-lg bg-gray-200">
+                            <img alt="Red cricket ball on ground"
+                                class="h-full w-full object-cover object-center group-hover:opacity-75 transition-opacity"
+                                data-alt="Cricket ball on pitch"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrHUWG1wb5s1doGeowCxx_tX2-prDROoH7Pn3S4_6x2cRrh0UMblMcWh1w4LEoBGCasuyjsDYdAU8_PStf5zTvbdIIpXwBTbJtFwNX7wNV4qBEAcikL6-IWzO7hifyzcNptunC9NMp9R1sd-rqX64WdmnC9wiupP2DHS3s12micOdyo0k_5RL8tnWQqbODoYVLWOcpFhfQWN8-UrvHhETnIwU_H55rKdqWQkiq6FOcnk1v5vZfsnNUcCf72t9RCA-aJBbj5TPqOpU" />
+                            <div
+                                class="absolute top-2 left-2 rounded bg-primary px-2 py-1 text-xs font-bold text-white shadow-sm">
+                                -20%</div>
+                        </div>
+                        <div class="mt-4 flex justify-between">
+                            <div>
+                                <h3 class="text-sm text-gray-700 dark:text-gray-200">
+                                    <a href="#">
+                                        <span aria-hidden="true" class="absolute inset-0"></span>
+                                        Performance Shorts
+                                    </a>
+                                </h3>
+                                <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Navy / Red Trim</p>
+                            </div>
+                            <div class="text-right">
+                                <p class="text-sm font-medium text-primary">$32.00</p>
+                                <p class="text-xs text-gray-400 line-through">$40.00</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product Card 4 -->
+                    <div class="group relative flex flex-col">
+                        <div class="aspect-[3/4] w-full overflow-hidden rounded-lg bg-gray-200">
+                            <img alt="White sports polo texture"
+                                class="h-full w-full object-cover object-center group-hover:opacity-75 transition-opacity"
+                                data-alt="Texture of white polo shirt"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBe_oLTeBpSNSvYh9l5uNBEt_WYqrQXYbIX1Z5Isq_-Ey-Dz5_ynALt3fvP-Jx0ZMzinQ7gk6nKNRhn8Hjn6pYUlagLMYMgdAPHYFBoRnVRcWIyI5fSEV7EP-2XVIP166U6dLJICWlGcOGOxrS7dFg4Zt-Ii6bk-fiSrQumW_J6AIZ0HMot1ZgQFxQOtD9ZFJlYTlKD7eNs5JBjYHUMtBbYNlcC4kuQ9iWKdP37jS-REKZnJ5EylAMG1_IrMiKJWPQc2fKOASoH-r0" />
+                        </div>
+                        <div class="mt-4 flex justify-between">
+                            <div>
+                                <h3 class="text-sm text-gray-700 dark:text-gray-200">
+                                    <a href="#">
+                                        <span aria-hidden="true" class="absolute inset-0"></span>
+                                        Supporter Polo
+                                    </a>
+                                </h3>
+                                <p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Classic White</p>
+                            </div>
+                            <p class="text-sm font-medium text-gray-900 dark:text-white">$55.00</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <!-- Footer -->
+        <footer class="bg-secondary text-white py-12 dark:bg-[#1a0f0f]">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                    <div class="col-span-1 md:col-span-1">
+                        <div class="flex items-center gap-2 mb-4 text-white">
+                            <div class="size-8 text-primary">
+                                <svg class="w-full h-full" fill="none" viewbox="0 0 48 48"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M24 44C35.0457 44 44 35.0457 44 24C44 12.9543 35.0457 4 24 4C12.9543 4 4 12.9543 4 24C4 35.0457 12.9543 44 24 44Z"
+                                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                        stroke-width="4"></path>
+                                    <path d="M24 12V36" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="4"></path>
+                                    <path d="M16 24H32" stroke="currentColor" stroke-linecap="round"
+                                        stroke-linejoin="round" stroke-width="4"></path>
+                                </svg>
+                            </div>
+                            <h2 class="text-lg font-bold">USA Cricket Hub</h2>
+                        </div>
+                        <p class="text-blue-200 text-sm">The official store and community hub for cricket enthusiasts in
+                            the USA.</p>
+                    </div>
+                    <div>
+                        <h3 class="font-bold mb-4">Shop</h3>
+                        <ul class="space-y-2 text-sm text-blue-200">
+                            <li><a class="hover:text-white" href="#">Men's</a></li>
+                            <li><a class="hover:text-white" href="#">Women's</a></li>
+                            <li><a class="hover:text-white" href="#">Youth</a></li>
+                            <li><a class="hover:text-white" href="#">Equipment</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-bold mb-4">Support</h3>
+                        <ul class="space-y-2 text-sm text-blue-200">
+                            <li><a class="hover:text-white" href="#">Order Status</a></li>
+                            <li><a class="hover:text-white" href="#">Shipping &amp; Returns</a></li>
+                            <li><a class="hover:text-white" href="#">Size Guide</a></li>
+                            <li><a class="hover:text-white" href="#">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3 class="font-bold mb-4">Stay Connected</h3>
+                        <p class="text-sm text-blue-200 mb-4">Subscribe for latest news and exclusive offers.</p>
+                        <div class="flex gap-2">
+                            <input
+                                class="w-full rounded bg-blue-900/50 border-blue-800 text-sm text-white placeholder-blue-400 focus:ring-primary focus:border-primary"
+                                placeholder="Email address" type="email" />
+                            <button
+                                class="bg-primary hover:bg-red-600 px-4 py-2 rounded text-sm font-bold transition-colors">Join</button>
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="border-t border-blue-900 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-blue-300">
+                    <p>© 2024 USA Cricket Hub. All rights reserved.</p>
+                    <div class="flex gap-6">
+                        <a class="hover:text-white" href="#">Privacy Policy</a>
+                        <a class="hover:text-white" href="#">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

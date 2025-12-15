@@ -1,0 +1,17 @@
+{
+  "name": "usa-cricket-hub",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tailwindcss -i ./src/css/styles.css -o ./src/assets/css/styles.css --watch",
+    "build": "tailwindcss -i ./src/css/styles.css -o ./src/assets/css/styles.css --minify"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.1"
+  }
+}
