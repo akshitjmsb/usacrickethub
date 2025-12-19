@@ -356,6 +356,7 @@
             </div>
             <!-- Reviews Section -->
             <section class="mt-20 border-t border-gray-200 dark:border-gray-800 pt-16">
+                <!-- Static Reviews for now -->
                 <h2 class="text-2xl font-bold text-secondary dark:text-white mb-8">Customer Reviews</h2>
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
                     <!-- Rating Summary -->
@@ -509,7 +510,7 @@
                             <img alt="Blue sports backpack texture"
                                 class="h-full w-full object-cover object-center group-hover:opacity-75 transition-opacity"
                                 data-alt="Close up of blue backpack fabric"
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuACyvJkyNzl7_Dt81aU0f3p0PSUaQssuxUp2N1JzSha5l3f-GMKogOhd0wiyvS43GvS48HFmMbs6iaKOkS4m1n6DsrGsImFnuxjbwdnC80wjkmXODfYiWgm8EL98waKWHkBorI5n4QY6v-DLGlu-hStbeM84ZtnXB2AybFQJQnkFHxH2qJGpfmW1xYAHjsnqr2PQJ1t2p0V7uqgW3TzJMUo0ORQiCLR7AEi0t4sdcyyvCUqfzVFZiKtEe1CZnX6EYhRRMRbMPMmqBo" />
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuACyvJkyNzl7_Dt81aU0f3p0PSUaQssuxUp2N1JzSha5l3f-GMKogOhd0wiybS43GvS48HFmMbs6iaKOkS4m1n6DsrGsImFnuxjbwdnC80wjkmXODfYiWgm8EL98waKWHkBorI5n4QY6v-DLGlu-hStbeM84ZtnXB2AybFQJQnkFHxH2qJGpfmW1xYAHjsnqr2PQJ1t2p0V7uqgW3TzJMUo0ORQiCLR7AEi0t4sdcyyvCUqfzVFZiKtEe1CZnX6EYhRRMRbMPMmqBo" />
                         </div>
                         <div class="mt-4 flex justify-between">
                             <div>
@@ -575,8 +576,10 @@
                 </div>
             </section>
         </main>
-        <!-- Footer -->
+
+        <!-- Footer (Static) -->
         <footer class="bg-secondary text-white py-12 dark:bg-[#1a0f0f]">
+            <!-- Footer content -->
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
                     <div class="col-span-1 md:col-span-1">
@@ -640,6 +643,72 @@
             </div>
         </footer>
     </div>
+
+    <!-- Supabase JS -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="./assets/js/supabase-config.js"></script>
+
+    <script>
+        async function fetchProductDetails() {
+            // Get ID from URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const productId = urlParams.get('id');
+
+            if (!productId) {
+                // If no ID, maybe redirect or show default (currently showing hardcoded as fallback)
+                return;
+            }
+
+            try {
+                const { data: product, error } = await supabaseClient
+                    .from('products')
+                    .select('*')
+                    .eq('id', productId)
+                    .single();
+
+                if (error) throw error;
+
+                if (product) {
+                    // Update Page Title
+                    document.title = `${product.name} | USA Cricket Hub`;
+
+                    // Update Breadcrumb
+                    const breadcrumbName = document.querySelector('nav[aria-label="Breadcrumb"] li:last-child span');
+                    if (breadcrumbName) breadcrumbName.textContent = product.name;
+
+                    // Update Main Title
+                    const mainTitle = document.querySelector('h1');
+                    if (mainTitle) mainTitle.textContent = product.name;
+
+                    // Update Price
+                    const priceEl = document.querySelector('.text-3xl.font-bold.text-primary');
+                    if (priceEl) priceEl.textContent = `$${product.price}`;
+
+                    // Update Image
+                    const mainImg = document.querySelector('.aspect-square img');
+                    if (mainImg) {
+                        mainImg.src = product.image_url;
+                        mainImg.alt = product.name;
+                    }
+
+                    // Update Description (find detail definition)
+                    // Note: This is a bit fragile with just selectors, but works for this structure
+                    const descContainer = document.querySelector('details[open] div p');
+                    if (descContainer) descContainer.textContent = product.description;
+
+                    // Update Category in Breadcrumb
+                    const categoryLink = document.querySelector('nav[aria-label="Breadcrumb"] li:nth-child(5) a');
+                    if (categoryLink) categoryLink.textContent = product.category || 'Gear';
+                }
+
+            } catch (err) {
+                console.error('Error fetching product:', err);
+                // Fallback to static content if fetch fails
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', fetchProductDetails);
+    </script>
 </body>
 
 </html>
