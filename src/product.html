@@ -644,8 +644,11 @@
         </footer>
     </div>
 
-    <!-- Supabase JS -->
+    <!-- Supabase JS and Configuration -->
     <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="./assets/js/env-loader.generated.js"></script>
+    <script src="./assets/js/config.js"></script>
+    <script src="./assets/js/sanitizer.js"></script>
     <script src="./assets/js/supabase-config.js"></script>
 
     <script>
@@ -655,12 +658,15 @@
             const productId = urlParams.get('id');
 
             if (!productId) {
-                // If no ID, maybe redirect or show default (currently showing hardcoded as fallback)
+                console.log('No product ID provided, showing default product');
                 return;
             }
 
             try {
-                const { data: product, error } = await supabaseClient
+                // Get Supabase client
+                const client = window.getSupabaseClient();
+
+                const { data: product, error } = await client
                     .from('products')
                     .select('*')
                     .eq('id', productId)
@@ -669,45 +675,56 @@
                 if (error) throw error;
 
                 if (product) {
-                    // Update Page Title
-                    document.title = `${product.name} | USA Cricket Hub`;
+                    // Sanitize all product data
+                    const safeName = window.Sanitizer.sanitize(product.name);
+                    const safePrice = window.Sanitizer.sanitize(String(product.price));
+                    const safeImageUrl = window.Sanitizer.sanitizeURL(product.image_url);
+                    const safeDescription = window.Sanitizer.sanitize(product.description || '');
+                    const safeCategory = window.Sanitizer.sanitize(product.category || 'Gear');
+
+                    // Update Page Title (textContent is safe)
+                    document.title = `${safeName} | USA Cricket Hub`;
 
                     // Update Breadcrumb
                     const breadcrumbName = document.querySelector('nav[aria-label="Breadcrumb"] li:last-child span');
-                    if (breadcrumbName) breadcrumbName.textContent = product.name;
+                    if (breadcrumbName) window.Sanitizer.setText(breadcrumbName, safeName);
 
                     // Update Main Title
                     const mainTitle = document.querySelector('h1');
-                    if (mainTitle) mainTitle.textContent = product.name;
+                    if (mainTitle) window.Sanitizer.setText(mainTitle, safeName);
 
                     // Update Price
                     const priceEl = document.querySelector('.text-3xl.font-bold.text-primary');
-                    if (priceEl) priceEl.textContent = `$${product.price}`;
+                    if (priceEl) window.Sanitizer.setText(priceEl, `$${safePrice}`);
 
                     // Update Image
                     const mainImg = document.querySelector('.aspect-square img');
-                    if (mainImg) {
-                        mainImg.src = product.image_url;
-                        mainImg.alt = product.name;
+                    if (mainImg && safeImageUrl) {
+                        mainImg.src = safeImageUrl;
+                        mainImg.alt = safeName;
                     }
 
-                    // Update Description (find detail definition)
-                    // Note: This is a bit fragile with just selectors, but works for this structure
+                    // Update Description
                     const descContainer = document.querySelector('details[open] div p');
-                    if (descContainer) descContainer.textContent = product.description;
+                    if (descContainer) window.Sanitizer.setText(descContainer, safeDescription);
 
                     // Update Category in Breadcrumb
                     const categoryLink = document.querySelector('nav[aria-label="Breadcrumb"] li:nth-child(5) a');
-                    if (categoryLink) categoryLink.textContent = product.category || 'Gear';
+                    if (categoryLink) window.Sanitizer.setText(categoryLink, safeCategory);
+
+                    console.log('✅ Product details loaded successfully');
                 }
 
             } catch (err) {
-                console.error('Error fetching product:', err);
+                console.error('❌ Error fetching product:', err);
                 // Fallback to static content if fetch fails
             }
         }
 
-        document.addEventListener('DOMContentLoaded', fetchProductDetails);
+        // Initialize when everything is ready
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(fetchProductDetails, 100);
+        });
     </script>
 </body>
 

@@ -1,14 +1,24 @@
 {
   "name": "usa-cricket-hub",
   "version": "1.0.0",
-  "description": "",
+  "description": "USA Cricket Hub - Premier cricket store and community",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "tailwindcss -i ./src/css/styles.css -o ./src/assets/css/styles.css --watch",
-    "build": "tailwindcss -i ./src/css/styles.css -o ./src/assets/css/styles.css --minify"
+    "build:env": "node scripts/build-env.js",
+    "build:css": "tailwindcss -i ./src/css/styles.css -o ./src/assets/css/styles.css --minify",
+    "build": "npm run build:env && npm run build:css",
+    "dev:env": "node scripts/build-env.js",
+    "dev:css": "tailwindcss -i ./src/css/styles.css -o ./src/assets/css/styles.css --watch",
+    "dev": "npm run dev:env && npm run dev:css",
+    "predev": "npm run build:env",
+    "prebuild": "npm run build:env"
   },
-  "keywords": [],
+  "keywords": [
+    "cricket",
+    "ecommerce",
+    "usa-cricket"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
